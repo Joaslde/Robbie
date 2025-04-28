@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NexAvis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Stars and glow effects -->
+    <div class="stars-container">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+    <div class="glow-effect glow-3"></div>
+    <div class="glow-effect glow-4"></div>
+    <div class="glow-effect glow-5"></div>
+
+    <!-- Header -->
+    <header id="main-header" class="py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <span class="logo-text">Nex<span class="logo-digital">Avis</span></span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="hamburger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Nos Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="realisations.html">Réalisations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link contact-btn active" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title py-5 bg-darker">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center reveal-up">
+                    <h1 class="display-4 fw-bold section-title" style="font-size: 39px;">Contactez-nous</h1>
+                   <center> <p class="lead text-light-gray hero-text-animated delay-1">Une question ? Un besoin précis ? Ou simplement envie d'échanger à propos de vos objectifs ? Nous sommes là pour vous aider.</p>
+                   </center></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-7 mb-5 mb-lg-0 reveal-left">
+                    <div class="card bg-dark border-0 rounded-3 p-4">
+                        <div class="card-body">
+                            <h3 class="mb-4">Envoyez-nous un message</h3>
+                            <form id="contactForm" action="send_mail.php" method="POST">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label text-light-gray">Nom complet *</label>
+                                        <input type="text" class="form-control text-black border-0" style="background-color: gray;" id="name" name="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label text-light-gray">Email *</label>
+                                        <input type="email" class="form-control text-black border-0" style="background-color: gray;" id="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label text-light-gray">Téléphone</label>
+                                        <input type="tel" class="form-control text-black border-0" style="background-color: gray;" id="phone" name="phone">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="subject" class="form-label text-light-gray">Sujet *</label>
+                                        <select class="form-select text-black border-0" name="subject" style="background-color: gray;" id="subject" required>
+                                            <option value="" selected disabled>Choisir un sujet</option>
+                                            <option value="devis">Demande de devis</option>
+                                            <option value="information">Demande d'information</option>
+                                            <option value="partenariat">Proposition de partenariat</option>
+                                            <option value="autre">Autre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label text-light-gray">Message *</label>
+                                    <textarea class="form-control text-black border-0" style="background-color: gray;" name="message" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="privacy" required>
+                                    <label class="form-check-label text-light-gray" for="privacy">J'accepte que mes données soient traitées conformément à la <a href="politique.html">politique de confidentialité </a></label>
+                                </div>
+                                <button type="submit" class="btn btn-orange">Envoyer le message</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-5 reveal-right">
+                    <div class="contact-info p-4">
+                        <h3 class="mb-4">Nos coordonnées</h3>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-map-marker-alt text-orange"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Adresse</h5>
+                                </div>
+                            </div>
+                            <p class="text-light-gray">123 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-phone text-orange"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Téléphone</h5>
+                                </div>
+                            </div>
+                            <p class="text-light-gray">+33 (0)1 23 45 67 89</p>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-envelope text-orange"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Email</h5>
+                                </div>
+                            </div>
+                            <p class="text-light-gray">contact@nexavis.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-clock text-orange"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Horaires</h5>
+                                </div>
+                            </div>
+                            <p class="text-light-gray">Lundi - Vendredi: 9h00 - 18h00<br>Samedi - Dimanche: Fermé</p>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="mt-5">
+                            <h5 class="mb-3">Suivez-nous</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section py-5 bg-darker">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 reveal-up">
+                    <h3 class="text-center mb-4">Nous trouver</h3>
+                   <center> <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.142047342144!2d2.3002508156744847!3d48.87004857928921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4a2d60f35%3A0x730aa53543c1f31b!2sChamps-%C3%89lys%C3%A9es%2C%20Paris%2C%20France!5e0!3m2!1sfr!2sfr!4v1651234567890!5m2!1sfr!2sfr" width="70%" height="430" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div></center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="text-center mb-5 reveal-up">
+                <h2 class="section-title">Questions fréquentes</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 reveal-up">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item bg-dark text-white border-0 mb-3">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Comment se déroule une collaboration avec NexAvis ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-light-gray">
+                                    Notre collaboration commence par un premier échange pour comprendre vos besoins et objectifs. Nous réalisons ensuite un audit de votre situation actuelle et vous proposons une stratégie personnalisée. Après validation, nous mettons en place les actions définies et assurons un suivi régulier des résultats.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark text-white border-0 mb-3">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Quels sont vos délais d'intervention ?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-light-gray">
+                                    Nous répondons généralement aux demandes de contact sous 24 à 48 heures ouvrées. Pour les projets, les délais varient selon la complexité : comptez environ 4 à 6 semaines pour un site vitrine, 8 à 12 semaines pour un site e-commerce, et 3 à 6 mois pour voir les premiers résultats significatifs en SEO.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark text-white border-0 mb-3">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Proposez-vous des formules d'accompagnement mensuel ?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-light-gray">
+                                    Oui, nous proposons des formules d'accompagnement mensuel adaptées à vos besoins et à votre budget. Ces formules incluent un suivi régulier, des rapports de performance et des actions d'optimisation continue. N'hésitez pas à nous contacter pour obtenir un devis personnalisé.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 reveal-left">
+                    <h3 class="footer-title">Nex<span class="text-orange">Avis</span></h3>
+                    <p class="text-light-gray">Solutions digitales pour développer votre visibilité en ligne et générer plus de clients.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 reveal-up">
+                    <h3 class="footer-title">Nos services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Optimisation SEO</a></li>
+                        <li><a href="services.html">Avis Google</a></li>
+                        <li><a href="services.html">Création de site internet</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4 reveal-right">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> Téléphone : +33 (0)1 23 45 67 89</li>
+                        <li><i class="fas fa-envelope"></i> Email : contact@nexavis.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Adresse : 123 Avenue des Champs-Élysées, 75008 Paris</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0 text-light-gray">© 2025 NexAvis. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a class="text-light-gray" href="mention-legale.html" style="text-decoration: none;">Mentions légales</a> | <a class="text-light-gray" href="politique.html" style="text-decoration: none;">Politique de confidentialité</a></p>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            var privacy = document.getElementById('privacy');
+        
+            if (!privacy.checked) {
+                e.preventDefault(); // bloque l'envoi si case non cochée
+                alert("Veuillez accepter la politique de confidentialité pour envoyer le message.");
+                return; // on arrête ici
+            }
+        
+            // Sinon (si tout est OK), on laisse partir et on peut envoyer vers le serveur PHP
+            // Pour l'instant, je laisse ton ancien comportement :
+            // Si tu veux envoyer réellement à un serveur, il faudra supprimer e.preventDefault();
+        
+        
+            alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+            this.reset();
+        });
+        </script>
+                
+</body>
+</html>
