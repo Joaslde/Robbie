@@ -83,15 +83,17 @@
                     <div class="card bg-dark border-0 rounded-3 p-4">
                         <div class="card-body">
                             <h3 class="mb-4">Envoyez-nous un message</h3>
-                            <form id="contactForm" action="send_mail.php" method="POST">
+                            <form id="contactForm" action=" https://formsubmit.co/el/gisife" method="POST">
+                                <input type="hidden" name="_next" value="index.html">
+
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="name" class="form-label text-light-gray">Nom complet *</label>
-                                        <input type="text" class="form-control text-black border-0" style="background-color: gray;" id="name" name="name" required>
+                                        <input type="text" class="form-control text-black border-0" style="background-color: gray;" id="name" name="name">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="email" class="form-label text-light-gray">Email *</label>
-                                        <input type="email" class="form-control text-black border-0" style="background-color: gray;" id="email" name="email" required>
+                                        <input type="email" class="form-control text-black border-0" style="background-color: gray;" id="email" name="email">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -101,7 +103,7 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="subject" class="form-label text-light-gray">Sujet *</label>
-                                        <select class="form-select text-black border-0" name="subject" style="background-color: gray;" id="subject" required>
+                                        <select class="form-select text-black border-0" name="subject" style="background-color: gray;" id="subject" >
                                             <option value="" selected disabled>Choisir un sujet</option>
                                             <option value="devis">Demande de devis</option>
                                             <option value="information">Demande d'information</option>
@@ -118,9 +120,11 @@
                                     <input type="checkbox" class="form-check-input" id="privacy" required>
                                     <label class="form-check-label text-light-gray" for="privacy">J'accepte que mes données soient traitées conformément à la <a href="politique.html">politique de confidentialité </a></label>
                                 </div>
+                                 <!-- Champs cachés pour configurer -->
+    <input type="hidden" name="_captcha" value="false"> 
+    <input type="hidden" name="_next" value="https://relanceconseil.site/">
                                 <button type="submit" class="btn btn-orange">Envoyer le message</button>
                             </form>
-                            
                         </div>
                     </div>
                 </div>
